@@ -21,6 +21,9 @@ export default function Header() {
       </Link>
       <nav className="ml-auto flex gap-4 sm:gap-6">
         <SignedIn>
+          <Button className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700">
+            <Link href="/dashboard">Dashboard</Link>
+          </Button>
           <UserButton showName={true} />
         </SignedIn>
         <SignedOut>

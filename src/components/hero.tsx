@@ -7,7 +7,6 @@ import {
 } from '@clerk/nextjs'
 
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -45,15 +44,6 @@ export default function Hero() {
                   </Button>
                 </SignInButton>
               </SignedOut>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-orange-200 text-orange-700 hover:bg-orange-50"
-              >
-                <Link href="/dashboard">
-                  Ver Demo
-                </Link>
-              </Button>
             </div>
             <div className="flex items-center gap-4 text-sm text-gray-600">
               <div className="flex items-center gap-1">

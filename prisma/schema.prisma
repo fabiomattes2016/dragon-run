@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model trainning_session {
+  id                      String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_id                 String    @db.VarChar(50)
+  date_time               DateTime? @default(now()) @db.Timestamptz(6)
+  distance_km             Decimal   @db.Decimal(5, 2)
+  duration_minutes        Int
+  calories_burned         Int
+  average_pace_km_per_min Decimal   @db.Decimal(4, 2)
+}
